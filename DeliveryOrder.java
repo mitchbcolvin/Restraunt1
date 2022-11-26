@@ -1,10 +1,10 @@
-public class DeliveryOrder extends Order{
-    private String customer, adress, phone;
-    
-    public DeliveryOrder(String customer, String adress, String phone){
-        super();
+public class DeliveryOrder extends Order {
+    private String customer, address, phone; 
+
+    public DeliveryOrder(String customer, String address, String phone){
+        super(); //implied 
         this.customer = customer;
-        this.adress = adress;
+        this.address = address;
         this.phone = phone;
     }
 
@@ -16,12 +16,12 @@ public class DeliveryOrder extends Order{
         this.customer = customer;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPhone() {
@@ -30,6 +30,10 @@ public class DeliveryOrder extends Order{
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String toString(){
+        return super.toString()+customer+" "+address+" "+phone;
     }
 
 }

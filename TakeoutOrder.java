@@ -1,5 +1,8 @@
-public class TakeoutOrder extends Order{
+import java.util.ArrayList;
+
+public class TakeoutOrder extends Order {
     private String customer;
+
 
     public TakeoutOrder(String customer){
         this.customer = customer;
@@ -8,6 +11,7 @@ public class TakeoutOrder extends Order{
     public TakeoutOrder(String customer, ArrayList<Food> dishes){
         super(dishes);
         this.customer = customer;
+
     }
 
     public String getCustomer() {
@@ -17,5 +21,16 @@ public class TakeoutOrder extends Order{
     public void setCustomer(String customer) {
         this.customer = customer;
     }
+
+    public String toString(){
+        return super.toString()+ customer;
+    }
+
+    public String[] getPossibleStatuses(){
+        String[] s = {"Placed", "Cooking", "Waiting for Pickup", "Delivered", "Canceled"};
+        return s;
+    }
+
+
 
 }
