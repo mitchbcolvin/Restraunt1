@@ -1,16 +1,16 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
-
-
+ 
+ 
+ 
 public class summerCamp {
     private static ArrayList<camper> camper = new ArrayList<>();
     private static ArrayList<counsler> counsler = new ArrayList<>();
     private static ArrayList<activities> activities = new ArrayList<>();
     private static Scanner sc = new Scanner(System.in);
-  
-
-
+ 
+ 
+ 
     public static void main(String[] args){
         int choice = 1;
         while (choice > 0){
@@ -24,10 +24,10 @@ public class summerCamp {
             System.out.println();
             choice = sc.nextInt();
             sc.nextLine();
-
+ 
             switch(choice){
-
-                case 1: 
+ 
+                case 1:
                 System.out.println("Register as a camper!");
                 System.out.println("Enter Name: ");
                 String name = sc.nextLine();
@@ -37,8 +37,8 @@ public class summerCamp {
                camper s = new camper(name, age);
                 camper.add(s);
                 break;
-
-                case 2: 
+ 
+                case 2:
                 System.out.println("Register as a consler!");
                 System.out.println("Enter Name: ");
                 String Name = sc.nextLine();
@@ -48,7 +48,7 @@ public class summerCamp {
                counsler t = new counsler( Name,Age);
                 camper.add(t);
                 break;
-
+ 
                 case 3:
                 System.out.println("Whats the activity?");
                 String activityName = sc.nextLine();
@@ -57,8 +57,8 @@ public class summerCamp {
                 activities m = new activities(activityName, activityRating, groupName );
                 activities.add(m);
                 System.out.println("Which Camper is partcipating");
-                for (int index = 0; index < camper.size(); index++) { 
-                    System.out.println(index + " " + camper.get(index)); 
+                for (int index = 0; index < camper.size(); index++) {
+                    System.out.println(index + " " + camper.get(index));
                 }
                 System.out.println();
                 System.out.println("Choice:");
@@ -67,15 +67,12 @@ public class summerCamp {
                 sc.nextLine();
                 if(l.getAge() < 18 && m.getActivityRating().equals("Your child is a gonner")){
                     System.out.println("We suggest, here at ColvinINC., that your child is 18");
-                
+               
                 }
                 break;
-
+ 
             }
         }
     }
-    
+   
 }
-                
-                
-                
