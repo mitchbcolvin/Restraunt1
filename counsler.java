@@ -37,7 +37,6 @@ public class counsler extends camper {
         return "Name:" + super.getName()+ " "+ "Age:"+ super.getAge() + " "+ "Group Name:"+groupName;
     
 
-
     
 
    
